@@ -8,7 +8,6 @@ module.exports = {
       const newData = new AdminCollection({
         name: data.name,
         file: filedata.filename,
-        year: data.year,
         sem: data.sem,
         content: data.content,
         department: department,

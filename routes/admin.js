@@ -64,7 +64,7 @@ router.get("/add-files", (req, res, next) => {
 });
 
 router.post("/filtered-subjects", (req, res) => {
-  const { department, year, semester } = req.body;
+  const { department, semester } = req.body;
 
   // Fetch subjects based on the selected year and semester from your database
   // Modify this logic according to your actual data
@@ -72,7 +72,7 @@ router.post("/filtered-subjects", (req, res) => {
 
   if (department === "c") {
     // Computer Department
-    if (year === "1" && semester === "1") {
+    if (semester === "1") {
       subjects = [
         "Applied Physics I",
         "Applied Chemistry",
@@ -83,7 +83,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Engineering worshop practice",
         "Introduction to IT system lab",
       ];
-    } else if (year === "1" && semester === "2") {
+    } else if (semester === "2") {
       subjects = [
         "Mathematics II",
         "Applied physics II",
@@ -93,7 +93,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Communication skills in english lab",
         "Engineering worshop practice",
       ];
-    } else if (year === "2" && semester === "3") {
+    } else if (semester === "3") {
       subjects = [
         "Computer organisation",
         "Programming in c",
@@ -102,7 +102,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Web technology lab",
         "Computer system hardware lab",
       ];
-    } else if (year === "2" && semester === "4") {
+    } else if (semester === "4") {
       subjects = [
         "Object oriented programming",
         "Data Structure",
@@ -112,7 +112,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Application development lab",
         "Minor project",
       ];
-    } else if (year === "3" && semester === "5") {
+    } else if (semester === "5") {
       subjects = [
         "Artificial intelligence and Machine learning",
         "Operating System",
@@ -120,7 +120,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Embedded system & real-time operating system",
         "Project management & software engineering",
       ];
-    } else if (year === "3" && semester === "6") {
+    } else if (semester === "6") {
       subjects = [
         "Entrepreneurship and startup",
         "Internet of things",
@@ -132,7 +132,7 @@ router.post("/filtered-subjects", (req, res) => {
       ];
     }
   } else if (department === "e") {
-    if (year === "1" && semester === "1") {
+    if (semester === "1") {
       subjects = [
         "Communication Skills in English",
         "Mathematics I",
@@ -145,7 +145,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Engineering Workshop Practice",
         "Sports and Yoga",
       ];
-    } else if (year === "1" && semester === "2") {
+    } else if (semester === "2") {
       subjects = [
         "Mathematics II",
         "Applied Physics II",
@@ -158,7 +158,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Electronics Tinkering Workshop",
         "Engineering Workshop Practice",
       ];
-    } else if (year === "2" && semester === "3") {
+    } else if (semester === "3") {
       subjects = [
         "Electric Circuits & Networks",
         "Principles of Electronic Communication",
@@ -170,7 +170,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Digital Electronics Lab",
         "Fundamentals of C Programming Lab",
       ];
-    } else if (year === "2" && semester === "4") {
+    } else if (semester === "4") {
       subjects = [
         "Microcontroller and Applications",
         "Electronic Measurements and Instrumentation",
@@ -182,7 +182,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Python Programming Lab",
         "Minor Project",
       ];
-    } else if (year === "3" && semester === "5") {
+    } else if (semester === "5") {
       subjects = [
         "Industrial Management and Safety",
         "Embedded Systems",
@@ -198,7 +198,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Seminar",
         "Major Project",
       ];
-    } else if (year === "3" && semester === "6") {
+    } else if (semester === "6") {
       subjects = [
         "Entrepreneurship and Startup",
         "Medical Electronics",
@@ -217,7 +217,7 @@ router.post("/filtered-subjects", (req, res) => {
       ];
     }
   } else if (department === "p") {
-    if (year === "1" && semester === "1") {
+    if (semester === "1") {
       subjects = [
         "Communication Skills in English",
         "Mathematics I",
@@ -230,7 +230,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Engineering Workshop Practice",
         "Sports and Yoga",
       ];
-    } else if (year === "1" && semester === "2") {
+    } else if (semester === "2") {
       subjects = [
         "Mathematics II",
         "Applied Physics II",
@@ -243,7 +243,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Office Automation Workshop",
         "Engineering Workshop Practice",
       ];
-    } else if (year === "2" && semester === "3") {
+    } else if (semester === "3") {
       subjects = [
         "Print Design",
         "Materials for Printing and Packaging",
@@ -255,7 +255,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Advanced Printing Machines Workshop I",
         "Basic Screen Printing Lab",
       ];
-    } else if (year === "2" && semester === "4") {
+    } else if (semester === "4") {
       subjects = [
         "Mechanism of Printing Machines II",
         "Print Finishing & Conversion Techniques",
@@ -267,7 +267,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Desktop Publishing Workshop II",
         "Minor Project",
       ];
-    } else if (year === "3" && semester === "5") {
+    } else if (semester === "5") {
       subjects = [
         "Industrial Management and Safety",
         "Packaging Techniques",
@@ -283,7 +283,7 @@ router.post("/filtered-subjects", (req, res) => {
         "Seminar",
         "Major Project",
       ];
-    } else if (year === "3" && semester === "6") {
+    } else if (semester === "6") {
       subjects = [
         "Entrepreneurship and Startup",
         "Specialized Printing Applications",
@@ -401,7 +401,7 @@ router.post("/add-files", uploadPdf.single("file"), async (req, res) => {
         req.session.department,
         (result) => {
           const _id = result;
-          res.redirect("/admin/view-file");
+          res.redirect("/admin");
         }
       );
     } else {

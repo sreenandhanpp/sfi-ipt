@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 
 const uri = 'mongodb+srv://sreenandhanpp:sreenu9061@cluster0.ultw9ny.mongodb.net/studyhub?retryWrites=true&w=majority'; 
-
+process.env.MONGODB_UR
 mongoose.connect(uri, {
   
 });
@@ -57,10 +57,6 @@ const AdminSchema=new mongoose.Schema({
     file:{
         type:String,
         required:true
-    },
-    year: {
-        type: String, // You can adjust the type based on your needs (String, Number, etc.)
-        required: true
     },
     sem:{
         type: String,
