@@ -28,9 +28,6 @@
           <li class="nav-item active">
             <a class="nav-link" href="#about">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#unit">Committee</a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -137,7 +134,9 @@
                   {{/each}}
                 </select>
               </div>
-
+{{#if subError}}
+<a class="sub-error" href=""> {{subError}} </a>
+{{/if}}
               <div class="text-center btn-box">
                 <button class="fetch-material-btn" type="submit"> Submit</button>
               </div>
@@ -421,10 +420,6 @@
               <a class="" href="#about">
                 About
               </a>
-              <a class="" href="#unit">
-                Unit
-              </a>
-            
             </div>
           </div>
         </div>

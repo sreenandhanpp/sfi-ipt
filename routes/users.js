@@ -7,7 +7,8 @@ const nodemailer = require("nodemailer");
 
 /* GET users listing. */
 router.get("/", (req, res) => {
-  res.render("user/home");
+  res.render("user/home",{ subError : req.session.subError});
+  req.session.subError = null
 });
 
 //computer......
@@ -42,15 +43,20 @@ router.post("/fetch-materials", async (req, res) => {
           error,
         });
       } else {
-        const filteredData = data.filter(
-          (file) => file.name === selectedSubject
-        );
-        res.render("user/view-file", {
-          user: req.session.user,
-          data: filteredData,
-          selectedSubject,
-          view: true,
-        });
+        if(selectedSubject){
+          const filteredData = data.filter(
+            (file) => file.name === selectedSubject
+          );
+          res.render("user/view-file", {
+            user: req.session.user,
+            data: filteredData,
+            selectedSubject,
+            view: true,
+          });
+        }else{
+          req.session.subError = "You forget to select year sem or subject" 
+          res.redirect('/')
+        }
       }
     });
   } catch (error) {

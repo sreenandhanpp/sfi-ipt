@@ -225,6 +225,15 @@ a:focus {
   transition: all 0.3s;
 }
 
+.sub-error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: red;
+  font-style: italic;
+}
+
 .custom_nav-container .navbar-toggler span::before,
 .custom_nav-container .navbar-toggler span::after {
   content: "";
