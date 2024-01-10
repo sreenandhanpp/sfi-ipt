@@ -1,0 +1,510 @@
+
+
+<!-- Carousel Start -->
+   <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+<header class="header_section">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="/">
+        <span class="study-center">
+          STUDY CENTER
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#unit">Committee</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+
+ <span class="sfi">SFI</span> IPT & GPTC,UNIT PRESENTS   
+                    </h1>
+                    <h1 >
+                      STUDY CENTER
+
+                    </h1>
+
+                    <div class="btn-box">
+                      <a href="#about" class="btn1">
+                        Read More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/cropped-sfi-logo.webp" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="back-blur">
+  </div>
+    <div class="service_container">
+      <div class="container ">
+       <section class="py-5 subject-filter-form">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card form-container">
+          <div class="card-body">
+             <div class="heading_container heading_center">
+          <h2>
+             <span>EXPLORE, FILTER, AND ACCESS LEARNING RESOURCES
+</span>
+          </h2>
+        </div>
+
+            <form action="/fetch-materials" method="post" class="form">
+            <div class="form-group input-container m-4">
+                <label for="year">Select Department</label>
+                <select class="form-control input " name="department" id="department">
+                  <option value="c">Computer </option>
+                  <option value="e">Electronics </option>
+                  <option value="p">Printing </option>
+                </select>
+              </div>
+              <div class="form-group input-container m-4">
+                <label for="year">Select Academic Year</label>
+                <select class="form-control input " name="year" id="yearDropdown">
+                  <option value="">Select</option>
+                  <option value="1">1st Year</option>
+                  <option value="2">2nd Year</option>
+                  <option value="3">3rd Year</option>
+                </select>
+              </div>
+<div class="form-group input-container m-4">
+    <label for="semester">Select Semester</label>
+    <select class="form-control input" name="sem" id="semesterDropdown">
+                  <option value="">Select</option>
+        <option class="year1" value="1">Semester 1</option>
+        <option class="year1" value="2">Semester 2</option>
+        <option class="year2" value="3">Semester 3</option>
+        <option class="year2" value="4">Semester 4</option>
+        <option class="year3" value="5">Semester 5</option>
+        <option class="year3" value="6">Semester 6</option>
+    </select>
+</div>
+
+
+              <div class="form-group input-container m-4">
+                <label for="subject">Select Subject</label>
+                <select class="form-control input" name="name" id="subjectDropdown">
+                  <!-- Empty dropdown, to be populated dynamically -->
+                  {{#each subjects}}
+                    <option value="{{this}}">{{this}}</option>
+                  {{/each}}
+                </select>
+              </div>
+
+              <div class="text-center btn-box">
+                <button class="fetch-material-btn" type="submit"> Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+  <section id="about" class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          About <span>Us</span>
+        </h2>
+        <p>
+          THIS IS AN OFFICIAL WEBSITE FOR THE STUDY MATERIALS
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/purepng.com-opened-bookobjectsopened-bookbook-open-object-old-note-magazine-631522325964a0mqp.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              WE ARE STUDY CENTER
+            </h3>
+            <p>
+            HERE SFI OF IPT & GPTC PRESENTS THIS WEBSITE FOR THE STUDENTS TO USE THIS WE BSITE TO DOWNLOAD THIER STUDY MATERIALS SUCH AS STUDY NOTES PREVIOUS YEAR QUESTION PAPER ETC
+            </p>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  
+{{!-- 
+  <!-- team section -->
+  <section id="unit" class="team_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="">
+          Our <span>Unit </span>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/team-1.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  SAYYAN
+                </h5>
+                <p>
+                  UNIT SECRETERY
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/team-2.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  SUBEESH
+                </h5>
+                <p>
+                  VICE SECRETERY
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/team-3.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  ABHIN N
+                </h5>
+                <p>
+                  CHAIRMAN
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/team-4.jpg" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  ATHUL
+                </h5>
+                <p>
+                  CHAIRMAN
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end team section --> --}}
+
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          STUDY WELL WITH <span>STUDY CENTER</span>
+        </h2>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  SFI IPT&GPTC UNIT,KULAPULLY
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call : 7902810313
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  sfiiptgptc@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+             THIS AN WEBSITE FOR STUDENTS OF IPT & GPTC TO DOWNLOAD THE NECESSERY NOTE AND QUESTION PAPERS FOR THEIR STUDIES
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="" href="#about">
+                About
+              </a>
+              <a class="" href="#unit">
+                Unit
+              </a>
+            
+            </div>
+          </div>
+        </div>
+        {{!-- <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            FEEDBACK
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              SUBMIT
+            </button>
+          </form>
+        </div> --}}
+      </div>
+    </div>
+  </section>
+
+  <script>
+function updateSemesterDropdown() {
+    var selectedYear = document.getElementById("yearDropdown").value;
+    console.log("Selected Year:", selectedYear);
+
+    var semesterOptions = document.querySelectorAll("#semesterDropdown option");
+    console.log("All Semester Options:", semesterOptions);
+
+    // Hide all semester options
+    semesterOptions.forEach(function (option) {
+        option.style.display = "none";
+    });
+
+    // Show semester options corresponding to the selected year
+    var yearSpecificOptions =
+         document.querySelectorAll("#semesterDropdown option.year" + selectedYear);
+
+    yearSpecificOptions.forEach(function (option) {
+        option.style.display = "block";
+    });
+
+    // Reset the selected option
+    document.getElementById("semesterDropdown").value = '';
+
+    // Load subjects after updating semester dropdown
+    loadSubjects();
+}
+
+// Initial update based on the default selected year
+updateSemesterDropdown();
+
+// Bind the update function to the change event of the year dropdown
+document.getElementById("yearDropdown").addEventListener("change", updateSemesterDropdown);
+
+
+function loadSubjects() {
+    const selectedYear = document.getElementById('yearDropdown').value;
+    const selectedDepartment = document.getElementById('department').value;
+    const selectedSemester = document.getElementById('semesterDropdown').value;
+
+    fetch('/admin/filtered-subjects', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ department: selectedDepartment, year: selectedYear, semester: selectedSemester }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            const subjectDropdown = document.getElementById('subjectDropdown');
+            subjectDropdown.innerHTML = '';
+
+            data.subjects.forEach(subject => {
+                const option = document.createElement('option');
+                option.value = subject;
+                option.text = subject;
+                subjectDropdown.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Error fetching subjects:', error));
+}
+
+document.getElementById('semesterDropdown').addEventListener('change', loadSubjects);
+
+</script>

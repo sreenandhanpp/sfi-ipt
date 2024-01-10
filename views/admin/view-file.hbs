@@ -1,0 +1,54 @@
+
+
+<section>
+  <div class="container">
+    <div class="row mt-4">
+      <a href="/admin/add-files" class="btn btn-success ml-auto">Add Notes</a>
+    </div>
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Content</th>
+          <th scope="col">File</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <th scope="row">{{inc @index}}</th>
+          <td>{{this.name}}</td>
+          <td>{{this.department}}</td>
+          <td>{{this.content}}</td>
+         {{#if file}}
+         <td>
+            
+            <button onclick="openPDF('../pdf/{{this.file}}')" class="btn btn-primary">Open PDF</button>
+            <p>This file is not a PDF. <a href="../pdf/{{this.file }}" download>Download</a></p>
+            
+          </td>
+           {{else}}
+           <p>No file available for viewing.</p>
+           {{/if}}
+           <td>
+            <a href="/admin/edit-files/{{this._id}}" class="btn btn-primary">Edit</a>
+            <a href="/admin/delete/{{this._id}}" class="btn btn-danger">Delete</a>
+          </td>
+           
+           
+          
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+    function openPDF(pdfUrl) {
+        window.open(pdfUrl, '_blank');
+    }
+</script>
